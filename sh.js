@@ -1254,6 +1254,13 @@ var def = {
 var sh = linkjs.makeLib(def);
 module.exports = sh;
 
+//expose Program prototype for customization
+module.exports.Program = Program;
+module.exports.parser = parser;
+module.exports.runCommand = runCommand;
+module.exports.listen = listen;
+
+
 sh.UNSET = ['unset environment variable'];
 sh.ENV = ['define complete environment'];
 sh.OO = ['redirect stdout and stderr to stdOut Only'];
